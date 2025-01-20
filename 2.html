@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .abc{
+            display: grid;
+            place-items: center;
+            padding: 20%;
+            /* border: 1px solid; */
+        }
+
+        .title1{
+            font-weight: bold;
+            margin-bottom: -1px;
+            font-size: 30px;
+        }
+
+        .enter1{
+            font-size: 20px;
+        }
+
+        .inputtedDate{
+            margin-bottom: -5px;
+            padding: 5px 6px;
+            width: 220px;
+        }
+
+        .button1{
+            background-color: rgb(103, 103, 254);
+            border: none;
+            color: white;
+            font-size: 20px;
+            padding: 5px 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="abc">
+        <p class="title1">Age Calculator</p>
+        <p class="enter1">Enter your date of birth</p>
+        <input type="date" class="inputtedDate"><br><br>
+        <button class="button1" onclick="fun1();">Calculate Age</button>
+        <p class="result"></p>
+
+        <script>
+
+            function fun1(){
+                
+                let inputDateString=document.querySelector(".inputtedDate").value;
+                let inputDate=new Date(inputDateString);
+                let currentDate=new Date();
+
+                let age=currentDate.getFullYear()-inputDate.getFullYear();
+
+                if(currentDate.getMonth()<inputDate.getMonth() || currentDate.getMonth()===inputDate.getMonth() && currentDate.getDate()<inputDate.getDate()){
+                    age--;
+                }
+
+                document.querySelector(".result").innerHTML=`<p><h2>You are ${age} years old.</h2></p>`;
+            }
+        </script>
+    </div>
+</body>
+</html>
