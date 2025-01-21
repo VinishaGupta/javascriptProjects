@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .abc{
+            display: grid;
+            place-items: center;
+            margin-top: 15%
+            
+        }
+
+        .a1{
+            width: 250px;
+            height: 220px;
+            border-radius: 15px;
+            border: 1px solid;
+        }
+
+        .a2{
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 15px;
+            font-size: 27px;
+            height: 45px;
+        }
+
+        .a3{
+            display: flex;
+            column-gap: 20px;
+        }
+
+        button{
+            font-size: 18px;
+            padding: 7px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- RGB colors are represented as rgb(r, g, b), where r, g, and b are integers between 0 and 255. -->
+
+    <div class="abc">
+        <div class="a1"></div>
+        <div class="a2"></div>
+        <div class="a3">
+            <div class="aa3"><button class="button1" onclick="randomColor()">Generate RGB</button></div>
+            <!-- <div class="aa4"><button class="button2" onclick="randomColor()">Generate HEX</button></div> -->
+        </div>
+    </div>
+
+    <script>
+
+        function randomColor(){
+            let r=Math.floor(Math.random()*256);
+            let g=Math.floor(Math.random()*256);
+            let b=Math.floor(Math.random()*256);
+            let color=`rgb(${r},${g},${b})`;
+            document.querySelector(".a2").innerHTML=color;
+            document.querySelector(".a1").style=`background-color: ${color}`;
+        }
+    </script>
+</body>
+</html>
