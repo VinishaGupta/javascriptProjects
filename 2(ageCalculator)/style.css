@@ -1,0 +1,66 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.abc{
+    display: grid;
+    place-items: center;
+    margin-top: 15%
+    
+}
+
+.a1{
+    width: 250px;
+    height: 220px;
+    border-radius: 15px;
+    border: 1px solid;
+}
+
+.a2{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 15px;
+    font-size: 27px;
+    height: 45px;
+}
+
+.a3{
+    display: flex;
+    column-gap: 20px;
+}
+
+button{
+    font-size: 18px;
+    padding: 7px;
+}body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.abc{
+    display: grid;
+    place-items: center;
+    padding: 20%;
+    /* border: 1px solid; */
+}
+
+.title1{
+    font-weight: bold;
+    margin-bottom: -1px;
+    font-size: 30px;
+}
+
+.enter1{
+    font-size: 20px;
+}
+
+.inputtedDate{
+    margin-bottom: -5px;
+    padding: 5px 6px;
+    width: 220px;
+}
+
+.button1{
+    background-color: rgb(103, 103, 254);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
