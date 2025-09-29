@@ -58,8 +58,8 @@ function calculateTip() {
   }
 
   if (isNaN(bill) || bill <= 0 || isNaN(numPeople) || numPeople <= 0) {
-    tipAmountDisplay.textContent = '$0.00';
-    totalAmountDisplay.textContent = '$0.00';
+    tipAmountDisplay.textContent = '0.00';
+    totalAmountDisplay.textContent = '0.00';
     return;
   }
 
@@ -68,6 +68,6 @@ function calculateTip() {
   const tipPerPerson = tipAmount / numPeople;
   const totalPerPerson = totalAmount / numPeople;
 
-  tipAmountDisplay.textContent = `$${tipPerPerson.toFixed(2)}`;
-  totalAmountDisplay.textContent = `$${totalPerPerson.toFixed(2)}`;
+  tipAmountDisplay.textContent = `${tipPerPerson.toFixed(2)}`;
+  totalAmountDisplay.textContent = `${totalPerPerson.toFixed(2)}`;
 }
