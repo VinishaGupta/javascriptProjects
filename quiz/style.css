@@ -5,7 +5,11 @@ body{
 .sidebar{
     position: fixed;
     overflow-x: hidden;
-    width: 0px;
+    width: 250px;
     height: 100%;
-    transitio;
+    transition: 0.3s;
+}
+
+.question-container{
+    transition: 0.3s;
 }
